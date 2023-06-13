@@ -1,0 +1,35 @@
+[main]
+entry=350
+
+[350]
+description=Native SCP Entry
+instances=1
+restart=Y
+
+[350.aix-rs6000]
+path=FilePath
+parameters=Parameters
+
+[350.prop.aix-rs6000]
+Data Segment Size=268435456
+jvmargs=-Xmx64M -Xms42M
+jvmargs.2=-Xmn26M -Xgcpolicy:gencon
+jvmargs.3=-Xgcthreads8
+
+[350.hpux-ia64]
+path=FilePath
+parameters=Parameters
+
+[350.prop.hpux-ia64]
+Data Segment Size=268435456
+jvmargs=-Xmx64M -Xms42M
+jvmargs.2=-XX:SchedulerPriorityRange=Anything
+jvmargs.3=-XX:-UseParallelGC -XX:+UseGetTimeOfDay
+
+[350.linux-x8664]
+path=FilePath
+parameters=Parameters
+
+[350.prop.linux-x8664]
+Data Segment Size=268435456
+jvmargs=-Xmx64M -Xms42M
